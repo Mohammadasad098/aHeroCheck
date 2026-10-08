@@ -50,6 +50,14 @@
     });
   });
 
+  document.querySelectorAll(".ps-signup-form").forEach(function (form) {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      form.reset();
+      showToast("You're on the list. Dummy signup — nothing was sent.");
+    });
+  });
+
   document.querySelectorAll(".js-buy").forEach(function (el) {
     el.addEventListener("click", function (e) {
       e.preventDefault();
