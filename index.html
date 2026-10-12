@@ -1,195 +1,447 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>The Peptides Doc - Landing samples</title>
+  <title>Peptides</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,500..700;1,6..72,500..600&family=Schibsted+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
   <link rel="stylesheet" href="css/theme.css" />
+  <link rel="stylesheet" href="css/a.css" />
+  <link rel="stylesheet" href="css/product-story.css" />
 </head>
-<body>
+
+<body class="layout-a page-product-story">
   <div class="noise" aria-hidden="true"></div>
-    <div class="presenter">Client preview - one product - eleven layouts</div>
   <header class="site-header">
     <div class="header-inner">
-      <a class="brand" href="index.html">
+      <a class="brand" href="#top">
         <img src="assets/logo.webp" alt="The Peptides Doc" />
       </a>
-      <a class="btn" href="#contact">Contact</a>
+      <nav class="nav" aria-label="Primary">
+        <a href="#formula">Formula</a>
+        <a href="#protocol">Protocol</a>
+        <a href="#label">Label</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <div class="header-cta">
+        <a class="btn" href="#contact">Contact</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-label="Open menu"><span></span></button>
+      </div>
     </div>
   </header>
+  <div class="ps-signup">
+    <div class="wrap ps-signup-inner">
+      <div class="ps-signup-copy">
+        <p class="ps-signup-kicker">Stay in the loop</p>
+        <p class="ps-signup-text">Protocol notes and drop alerts — research updates only.</p>
+      </div>
+      <form class="ps-signup-form" action="#" method="post">
+        <label class="visually-hidden" for="ps-email">Email</label>
+        <input id="ps-email" type="email" name="email" autocomplete="email" placeholder="you@email.com" required />
+        <button class="btn" type="submit">Join list</button>
+      </form>
+    </div>
+  </div>
   <main>
-    <section class="hub-hero wrap">
-      <p class="kicker" style="justify-content:center;width:100%">Presentation hub</p>
-      <h1>BPC-157 + TB-500 + GHK-CU</h1>
-      <p>Single-product landing mockups in the live-site theme. Same Tropical Punch formula, eleven arrangements - pick a direction with the client, then we lock one.</p>
+    <section class="ax-hero" id="top">
+      <div class="wrap ax-hero-grid">
+        <p class="kicker">Research blend</p>
+        <h1>Peptides</h1>
+        <p class="lede">Without the Needles</p>
+        <p class="flavor-chip"><i></i> Tropical Punch - 30 ml</p>
+        <div class="hero-actions">
+          <a class="btn" href="#formula">See the formula</a>
+          <a class="ax-link" href="#protocol">How it is used</a>
+        </div>
+        <div class="ax-hero-visual product-stage">
+          <img src="assets/product_img.webp" alt="The Peptides Doc GHK-Cu, BPC-157 and TB-500 Tropical Punch box" />
+        </div>
+      </div>
+      <div class="wrap">
+        <dl class="ax-rail">
+          <div>
+            <dt>Volume</dt>
+            <dd>30 ml</dd>
+          </div>
+          <div>
+            <dt>Concentration</dt>
+            <dd>10 mg/ml</dd>
+          </div>
+          <div>
+            <dt>Total</dt>
+            <dd>300 mg</dd>
+          </div>
+          <div>
+            <dt>Servings</dt>
+            <dd>30</dd>
+          </div>
+        </dl>
+      </div>
     </section>
-    <section class="wrap sample-grid">
-      <a class="sample-card" href="samples/a-store-matched.html">
-        <div class="sample-preview" aria-hidden="true">
-          <div class="mini-a">
-            <div class="mini-box"></div>
-            <div class="mini-lines">
-              <i></i><b></b><i></i><i></i><em></em>
+
+    <section class="ax-product ax-show" id="blend" aria-roledescription="carousel" aria-label="The blend" tabindex="0">
+      <div class="wrap ax-show-top">
+        <span class="kicker">The blend</span>
+        <a class="ax-link" href="#formula">See the formula</a>
+      </div>
+      <div class="wrap ax-show-slides">
+        <article class="ax-show-slide is-active" data-slide>
+          <div class="ax-show-visual">
+            <span class="ax-show-num" aria-hidden="true">01</span>
+            <img src="assets/product_img.webp"
+              alt="The Peptides Doc GHK-Cu, BPC-157 and TB-500 Tropical Punch box" />
+          </div>
+          <div class="ax-show-copy">
+            <p class="kicker">Research formula 01</p>
+            <h2>BPC-157</h2>
+            <p class="ax-show-role">Tissue research</p>
+            <div class="hero-actions">
+              <a class="ax-link" href="#label">Read the label</a>
             </div>
           </div>
-        </div>
-        <div class="sample-meta">
-          <span>Sample A</span>
-          <h2>Product story</h2>
-          <p>Product on the left, story on the right. Formula and protocol - no cart.</p>
-        </div>
-      </a>
-      <a class="sample-card" href="samples/b-centered.html">
-        <div class="sample-preview" aria-hidden="true">
-          <div class="mini-b">
-            <div class="mini-box"></div>
-            <div class="mini-lines">
-              <i></i><b></b><em></em>
+        </article>
+        <article class="ax-show-slide" data-slide aria-hidden="true">
+          <div class="ax-show-visual">
+            <span class="ax-show-num" aria-hidden="true">02</span>
+            <img src="assets/product_img_2.webp" alt="The Peptides Doc Tropical Punch box, alternate angle" />
+          </div>
+          <div class="ax-show-copy">
+            <p class="kicker">Research formula 02</p>
+            <h2>TB-500</h2>
+            <p class="ax-show-role">Mobility research</p>
+            <div class="hero-actions">
+              <a class="ax-link" href="#label">Read the label</a>
             </div>
           </div>
-        </div>
-        <div class="sample-meta">
-          <span>Sample B</span>
-          <h2>Centered campaign</h2>
-          <p>Full-width hero with the carton in the middle. A launch page, not a store.</p>
-        </div>
-      </a>
-      <a class="sample-card" href="samples/c-split.html">
-        <div class="sample-preview" aria-hidden="true">
-          <div class="mini-c">
-            <div class="mini-box"></div>
-            <div class="mini-lines">
-              <i></i><b></b><i></i><i></i><i></i><em></em>
+        </article>
+        <article class="ax-show-slide" data-slide aria-hidden="true">
+          <div class="ax-show-visual">
+            <span class="ax-show-num" aria-hidden="true">03</span>
+            <img src="assets/product_img_3.webp" alt="Close view of the Tropical Punch research blend carton" />
+          </div>
+          <div class="ax-show-copy">
+            <p class="kicker">Research formula 03</p>
+            <h2>GHK-CU</h2>
+            <p class="ax-show-role">Copper peptide</p>
+            <div class="hero-actions">
+              <a class="ax-link" href="#label">Read the label</a>
             </div>
           </div>
+        </article>
+      </div>
+      <div class="wrap ax-show-bar">
+        <div class="ax-show-arrows">
+          <button type="button" data-prev aria-label="Previous peptide">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M19 12H5M12 19l-7-7 7-7" />
+            </svg>
+          </button>
+          <button type="button" data-next aria-label="Next peptide">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </button>
         </div>
-        <div class="sample-meta">
-          <span>Sample C</span>
-          <h2>Split narrative</h2>
-          <p>The carton stays put while the formula, protocol, and label scroll beside it.</p>
+        <div class="ax-show-index">
+          <button type="button" data-dot="0" aria-current="true"
+            aria-label="01 — show BPC-157"><span>01</span><i></i></button>
+          <button type="button" data-dot="1" aria-current="false"
+            aria-label="02 — show TB-500"><span>02</span><i></i></button>
+          <button type="button" data-dot="2" aria-current="false"
+            aria-label="03 — show GHK-CU"><span>03</span><i></i></button>
         </div>
-      </a>
-      <a class="sample-card" href="samples/d-cinematic.html">
-        <div class="sample-preview" aria-hidden="true">
-          <div class="mini-d">
-            <div class="mini-lines">
-              <i></i><b></b><i></i>
-            </div>
-            <div class="mini-box"></div>
-          </div>
+      </div>
+      <div class="ax-show-meta">
+        <div class="wrap">
+          <span>30 ml</span>
+          <span>10 mg/ml</span>
+          <span>30 servings</span>
         </div>
-        <div class="sample-meta">
-          <span>Sample D</span>
-          <h2>Cinematic frame</h2>
-          <p>Launch-film still. Giant type, floating spec pills, box as the poster.</p>
-        </div>
-      </a>
-      <a class="sample-card" href="samples/e-timeline.html">
-        <div class="sample-preview" aria-hidden="true">
-          <div class="mini-e">
-            <div class="mini-lines"><i></i><b></b></div>
-            <div class="mini-lines"><i></i><b></b></div>
-            <div class="mini-lines"><i></i><b></b></div>
-          </div>
-        </div>
-        <div class="sample-meta">
-          <span>Sample E</span>
-          <h2>30-day timeline</h2>
-          <p>The page is the protocol: Day 1 through Day 30, then the formula.</p>
-        </div>
-      </a>
-      <a class="sample-card" href="samples/f-chapters.html">
-        <div class="sample-preview" aria-hidden="true">
-          <div class="mini-f">
-            <span></span><span></span><span></span>
-          </div>
-        </div>
-        <div class="sample-meta">
-          <span>Sample F</span>
-          <h2>Formula chapters</h2>
-          <p>BPC-157, TB-500, and GHK-Cu each get a band. They meet at the carton.</p>
-        </div>
-      </a>
-      <a class="sample-card" href="samples/g-needles.html">
-        <div class="sample-preview" aria-hidden="true">
-          <div class="mini-g">
-            <div class="mini-lines"><i></i><b></b><i></i></div>
-            <div class="mini-box"></div>
-          </div>
-        </div>
-        <div class="sample-meta">
-          <span>Needles</span>
-          <h2>Without the needles</h2>
-          <p>Long-form product page: format versus vials, peel-place-done, formula, carton facts.</p>
-        </div>
-      </a>
-      <a class="sample-card" href="samples/h-needles.html">
-        <div class="sample-preview" aria-hidden="true">
-          <div class="mini-h">
-            <div class="mini-box"></div>
-            <div class="mini-lines">
-              <i></i><b></b><i></i>
-            </div>
-          </div>
-        </div>
-        <div class="sample-meta">
-          <span>Needles</span>
-          <h2>The strip</h2>
-          <p>Needles variant. Lifestyle photo first, then peel-place-done as a list.</p>
-        </div>
-      </a>
-      <a class="sample-card" href="samples/i-needles.html">
-        <div class="sample-preview" aria-hidden="true">
-          <div class="mini-i">
-            <b>30</b>
-            <div class="mini-box"></div>
-          </div>
-        </div>
-        <div class="sample-meta">
-          <span>Needles</span>
-          <h2>Thirty counts</h2>
-          <p>Needles variant. Giant 30 CT, then the swap from vials to strips.</p>
-        </div>
-      </a>
-      <a class="sample-card" href="samples/j-launch.html">
-        <div class="sample-preview" aria-hidden="true">
-          <div class="mini-j">
-            <div class="mini-lines">
-              <i></i><b></b><i></i><em></em>
-            </div>
-            <div class="mini-box"></div>
-          </div>
-        </div>
-        <div class="sample-meta">
-          <span>Sample J</span>
-          <h2>Launch page</h2>
-          <p>Full conversion landing: problem to solution, specs, trust, gallery, FAQ, buy.</p>
-        </div>
-      </a>
-      <a class="sample-card" href="samples/product-story.html">
-        <div class="sample-preview" aria-hidden="true">
-          <div class="mini-a">
-            <div class="mini-box"></div>
-            <div class="mini-lines">
-              <i></i><b></b><i></i><i></i><em></em>
-            </div>
-          </div>
-        </div>
-        <div class="sample-meta">
-          <span>Product Story</span>
-          <h2>Same as A</h2>
-          <p>Exact same UI as Sample A — separate page/route for review.</p>
-        </div>
-      </a>
+      </div>
     </section>
-    <section class="contact-band" id="contact">
-      <div class="wrap contact-layout">
-        <div class="contact-copy">
+
+    <section class="ax-formula" id="formula">
+      <div class="wrap">
+        <header class="ax-formula-head">
+          <p class="kicker">The formula</p>
+          <h2>Three peptides,<br />one bottle</h2>
+          <p>Each milliliter is mixed for research protocols that stack tissue support, mobility work, and
+            copper-peptide signaling.</p>
+        </header>
+        <div class="ax-blend">
+          <article>
+            <div class="ax-name">
+              <span class="ax-idx">01</span>
+              <h3>BPC-157</h3>
+            </div>
+            <div class="ax-detail">
+              <p class="ax-role">Tissue research</p>
+              <p>The pentadecapeptide used in gut, tendon, and recovery models. Here it sits in the same protocol as
+                TB-500 instead of a second vial.</p>
+            </div>
+          </article>
+          <article>
+            <div class="ax-name">
+              <span class="ax-idx">02</span>
+              <h3>TB-500</h3>
+            </div>
+            <div class="ax-detail">
+              <p class="ax-role">Mobility research</p>
+              <p>Thymosin beta-4 fragment studied for actin regulation and recovery windows. Paired so daily handling
+                stays simple.</p>
+            </div>
+          </article>
+          <article>
+            <div class="ax-name">
+              <span class="ax-idx">03</span>
+              <h3>GHK-CU</h3>
+            </div>
+            <div class="ax-detail">
+              <p class="ax-role">Copper peptide</p>
+              <p>The copper-binding tripeptide associated with repair and skin-quality research - rounded out with
+                Tropical Punch flavoring.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="ax-protocol" id="protocol">
+      <div class="wrap">
+        <header class="ax-protocol-head">
+          <h2>Just 3 easy steps</h2>
+          <p>Dissolves in seconds. Zero needles. No reconstitution.</p>
+        </header>
+      </div>
+      <div class="ax-easy-stage">
+        <ul class="ax-orbit" aria-hidden="true">
+          <li>
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M18 5h4M20 3v4M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401" />
+            </svg>
+            <span>Sleep</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8M21 3v5h-5M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16M8 16H3v5" />
+            </svg>
+            <span>Recovery</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z" />
+            </svg>
+            <span>Energy</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
+            </svg>
+            <span>Health</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1zM9 12h6M12 9v6" />
+            </svg>
+            <span>Immunity</span>
+          </li>
+        </ul>
+        <img src="assets/steps-model-orig.webp"
+          alt="Athlete placing a Peptides Doc oral dissolving strip on her tongue" />
+        <div class="wrap">
+          <div class="ax-steps">
+            <article>
+              <span class="ax-idx">1</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 17V3M6 11l6 6 6-6M19 21H5" />
+              </svg>
+              <div>
+                <h3>Place</h3>
+                <p>Place one strip on your tongue.</p>
+              </div>
+            </article>
+            <article>
+              <span class="ax-idx">2</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05zM12.56 6.6A10.97 10.97 0 0 0 14 3.02c.5 2.5 2 4.9 4 6.5s3 3.5 3 5.5a6.98 6.98 0 0 1-11.91 4.97" />
+              </svg>
+              <div>
+                <h3>Dissolve</h3>
+                <p>Press to the roof of your mouth, do not swallow.</p>
+              </div>
+            </article>
+            <article>
+              <span class="ax-idx">3</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M12 6v6l4 2" />
+              </svg>
+              <div>
+                <h3>Wait</h3>
+                <p>No food or drinks for 20 minutes.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ax-label" id="label">
+      <div class="wrap">
+        <header class="ax-label-head">
+          <div>
+            <p class="kicker">The label</p>
+            <h2>What is on the carton</h2>
+          </div>
+          <p>Same facts panel you would expect on the product page - pulled forward so the landing page can stand alone.
+          </p>
+        </header>
+        <div class="ax-sheet">
+          <div class="ax-facts">
+            <h3>Supplement facts - per serving</h3>
+            <div class="facts-row"><span>BPC-157</span><strong>Research blend</strong></div>
+            <div class="facts-row"><span>TB-500</span><strong>Research blend</strong></div>
+            <div class="facts-row"><span>GHK-CU</span><strong>Research blend</strong></div>
+            <div class="facts-row"><span>Volume</span><strong>30 ml</strong></div>
+            <div class="facts-row"><span>Concentration</span><strong>10 mg/ml</strong></div>
+            <div class="facts-row"><span>Total peptide</span><strong>300 mg</strong></div>
+            <div class="facts-row"><span>Servings per carton</span><strong>30</strong></div>
+          </div>
+          <div class="ax-notes">
+            <article>
+              <h3>Other ingredients</h3>
+              <p>Purified water, flavor system (Tropical Punch), and research-grade solubilizers as listed on the
+                physical label.</p>
+            </article>
+            <article>
+              <h3>Storage</h3>
+              <p>Keep sealed, away from heat and direct light. Do not freeze unless the lot paperwork says otherwise.
+              </p>
+            </article>
+            <article>
+              <h3>Suggested use</h3>
+              <p>For research protocols only. Not a dietary supplement, drug, or cosmetic. Not for human consumption.
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ax-faq" id="faq">
+      <div class="wrap ax-faq-layout">
+        <header class="ax-faq-head">
+          <p class="kicker">Questions</p>
+          <h2>About this product</h2>
+        </header>
+        <div class="faq">
+          <div class="faq-item">
+            <button type="button" aria-expanded="false">What is in this blend?<span>+</span></button>
+            <div class="answer">
+              <p>BPC-157, TB-500, and GHK-Cu in a Tropical Punch research solution. Total labeled content is 300 mg
+                across 30 ml at 10 mg/ml.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button type="button" aria-expanded="false">Is this a medicine?<span>+</span></button>
+            <div class="answer">
+              <p>No. This mockup follows a research-use brand. It is not intended to diagnose, treat, cure, or prevent
+                any disease.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button type="button" aria-expanded="false">How many servings are in the bottle?<span>+</span></button>
+            <div class="answer">
+              <p>Thirty servings are printed on the spec strip, matching a 30 ml carton.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button type="button" aria-expanded="false">Can I buy from this page?<span>+</span></button>
+            <div class="answer">
+              <p>No. This is a product landing for the client review - story and specs only, no cart.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ax-reviews" id="reviews" aria-labelledby="reviews-title">
+      <div class="wrap">
+        <header class="ax-reviews-head">
+          <div>
+            <p class="kicker">Verified reviews</p>
+            <h2 id="reviews-title">What researchers report</h2>
+          </div>
+        </header>
+        <div class="ax-reviews-grid">
+          <figure>
+            <span class="ax-quote" aria-hidden="true">“</span>
+            <p class="ax-stars" role="img" aria-label="5 out of 5"><i></i><i></i><i></i><i></i><i></i></p>
+            <blockquote>
+              <p>Placeholder review. The strips removed the reconstitution step from our protocol entirely — consistency
+                across the group improved immediately.</p>
+            </blockquote>
+            <figcaption>
+              <p class="ax-review-name">R. Alvarez</p>
+              <p class="ax-review-role">Research coordinator</p>
+            </figcaption>
+          </figure>
+          <figure>
+            <span class="ax-quote" aria-hidden="true">“</span>
+            <p class="ax-stars" role="img" aria-label="5 out of 5"><i></i><i></i><i></i><i></i><i></i></p>
+            <blockquote>
+              <p>Placeholder review. Packaging arrives sealed with the lot code printed on the carton, and the COA
+                matched the batch we received.</p>
+            </blockquote>
+            <figcaption>
+              <p class="ax-review-name">M. Chen</p>
+              <p class="ax-review-role">Sports medicine</p>
+            </figcaption>
+          </figure>
+          <figure>
+            <span class="ax-quote" aria-hidden="true">“</span>
+            <p class="ax-stars" role="img" aria-label="4 out of 5"><i></i><i></i><i></i><i></i><i class="is-off"></i>
+            </p>
+            <blockquote>
+              <p>Placeholder review. Citrus base is genuinely pleasant, which matters more than you'd think for daily
+                adherence.</p>
+            </blockquote>
+            <figcaption>
+              <p class="ax-review-name">J. Whitfield</p>
+              <p class="ax-review-role">Longevity clinic</p>
+            </figcaption>
+          </figure>
+          <figure>
+            <span class="ax-quote" aria-hidden="true">“</span>
+            <p class="ax-stars" role="img" aria-label="5 out of 5"><i></i><i></i><i></i><i></i><i></i></p>
+            <blockquote>
+              <p>Placeholder review. Shipping was three days, discreet carton, no cold pack needed.</p>
+            </blockquote>
+            <figcaption>
+              <p class="ax-review-name">S. Kaur</p>
+              <p class="ax-review-role">Independent researcher</p>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="ax-close" id="contact">
+      <div class="wrap ax-close-grid">
+        <div class="ax-close-copy">
           <p class="kicker">The desk</p>
-          <h2>Talk to The Peptides Doc.</h2>
+          <h2>Talk to<br />The Peptides Doc.</h2>
           <p class="lede">Dummy concierge for this mockup. Email, phone, and the form do not reach a live inbox.</p>
           <ul class="contact-points">
             <li>
@@ -229,8 +481,17 @@
   <footer class="site-footer">
     <div class="wrap footer-grid">
       <div>
-        <a class="brand" href="index.html"><img src="assets/logo.webp" alt="The Peptides Doc" /></a>
-        <p style="margin-top:16px">Research peptides. Not medical advice.</p>
+        <a class="brand" href="#top"><img src="assets/logo.webp" alt="The Peptides Doc" /></a>
+        <p>Research peptides. Presentation mockup. Not medical advice.</p>
+      </div>
+      <div>
+        <h4>Product</h4>
+        <ul>
+          <li><a href="#formula">Formula</a></li>
+          <li><a href="#protocol">Protocol</a></li>
+          <li><a href="#label">Label</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
       </div>
       <div>
         <h4>Contact</h4>
@@ -243,16 +504,12 @@
       <div>
         <h4>Studio</h4>
         <p>1200 Market Street, Suite 400<br />San Francisco, CA</p>
-      </div>
-      <div>
-        <h4>Hours</h4>
         <p>Mon-Fri, 9:00-17:00 PT</p>
       </div>
     </div>
-    <div class="wrap legal">
-      For research use only. Not for human consumption. Dummy contact for this presentation.
-    </div>
+    <div class="wrap legal">2026 The Peptides Doc - Client landing mockup</div>
   </footer>
   <script src="js/main.js"></script>
 </body>
+
 </html>
