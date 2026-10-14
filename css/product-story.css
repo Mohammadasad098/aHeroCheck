@@ -36,7 +36,7 @@ body.page-product-story::before {
 }
 
 /* Hero email signup (main CTA) */
-.page-product-story .ax-hero .ps-signup {
+.page-product-story .ps-signup {
   grid-area: actions;
   position: relative;
   z-index: 2;
@@ -138,11 +138,6 @@ body.page-product-story::before {
 }
 
 @media (max-width: 720px) {
-  .page-product-story .ax-hero .ps-signup {
-    max-width: none;
-    padding: 16px;
-  }
-
   .page-product-story .ps-signup-form {
     flex-wrap: wrap;
   }
@@ -397,7 +392,7 @@ body.page-product-story::before {
 .page-product-story .ax-hero h1,
 .page-product-story .ax-hero .lede,
 .page-product-story .ax-hero .flavor-chip,
-.page-product-story .ax-hero .ps-signup,
+.page-product-story .ax-hero .hero-actions,
 .page-product-story .ax-hero-visual {
   animation: ps-rise 0.85s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
@@ -406,7 +401,7 @@ body.page-product-story::before {
 .page-product-story .ax-hero h1 { animation-delay: 0.12s; }
 .page-product-story .ax-hero .lede { animation-delay: 0.2s; }
 .page-product-story .ax-hero .flavor-chip { animation-delay: 0.28s; }
-.page-product-story .ax-hero .ps-signup { animation-delay: 0.36s; }
+.page-product-story .ax-hero .hero-actions { animation-delay: 0.36s; }
 .page-product-story .ax-hero-visual { animation-delay: 0.16s; }
 
 /* Clean label — no glowing pill chrome */
@@ -493,6 +488,60 @@ body.page-product-story::before {
   display: none;
 }
 
+.page-product-story .ax-hero .hero-actions {
+  gap: 20px;
+  align-items: center;
+}
+
+.page-product-story .ax-hero .btn {
+  position: relative;
+  overflow: hidden;
+  min-height: 52px;
+  padding: 0 28px;
+  border-radius: 999px;
+  background: var(--ps-teal);
+  color: #061018;
+  box-shadow: 0 8px 28px rgba(92, 232, 212, 0.28);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.page-product-story .ax-hero .btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(110deg, transparent 30%, rgba(255, 255, 255, 0.4) 50%, transparent 70%);
+  transform: translateX(-130%);
+  transition: transform 0.55s ease;
+}
+
+.page-product-story .ax-hero .btn:hover {
+  background: #b8fff6;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(92, 232, 212, 0.38);
+}
+
+.page-product-story .ax-hero .btn:hover::after {
+  transform: translateX(130%);
+}
+
+.page-product-story .ax-hero .ax-link {
+  letter-spacing: 0.14em;
+  text-decoration: none;
+  color: #f7fafb;
+  border-bottom: 1px solid rgba(92, 232, 212, 0.55);
+  padding-bottom: 3px;
+  transition: color 0.25s ease, border-color 0.25s ease;
+}
+
+.page-product-story .ax-hero .ax-link::after {
+  display: none;
+}
+
+.page-product-story .ax-hero .ax-link:hover {
+  color: var(--ps-teal);
+  border-bottom-color: var(--ps-teal);
+}
+
 /* Product — shiny edge on img only */
 .page-product-story .ax-hero-visual {
   position: relative;
@@ -543,8 +592,39 @@ body.page-product-story::before {
 }
 
 /* Specs — glass metric tiles */
-.page-product-story .ax-hero > .wrap:has(.ax-rail) {
+.page-product-story .ax-hero > .wrap:has(.ps-rail-signup) {
   padding-bottom: 36px;
+}
+
+.page-product-story .ps-rail-signup {
+  width: 100%;
+  max-width: none;
+  margin-top: 32px;
+  padding: 20px 24px;
+  border-radius: 18px;
+}
+
+.page-product-story .ps-rail-signup .ps-signup-inner {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.page-product-story .ps-rail-signup .ps-signup-form {
+  max-width: 520px;
+}
+
+@media (max-width: 720px) {
+  .page-product-story .ps-rail-signup {
+    padding: 16px;
+  }
+
+  .page-product-story .ps-rail-signup .ps-signup-inner {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+  }
 }
 
 .page-product-story .ax-rail {
@@ -2324,7 +2404,7 @@ body.page-product-story::before {
   .page-product-story .ax-hero h1,
   .page-product-story .ax-hero .lede,
   .page-product-story .ax-hero .flavor-chip,
-  .page-product-story .ax-hero .ps-signup,
+  .page-product-story .ax-hero .hero-actions,
   .page-product-story .ax-hero-visual,
   .page-product-story .ax-rail div,
   .page-product-story .ax-show-visual img,
