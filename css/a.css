@@ -21,8 +21,8 @@
   --punch: #e0b09a;
   --btn: #3eead4;
   --btn-text: #010b19;
-  --display: "Newsreader", Georgia, serif;
-  --sans: "Schibsted Grotesk", system-ui, sans-serif;
+  --display: "Plus Jakarta Sans", system-ui, sans-serif;
+  --sans: "Plus Jakarta Sans", system-ui, sans-serif;
   --header: 72px;
   --shadow: none;
   background: var(--s0);
@@ -285,7 +285,7 @@ body.nav-open .layout-a .menu-toggle span::after {
 /* Hero */
 .ax-hero {
   --gutter: calc(clamp(2.8rem, 5vw, 5.35rem) * 0.58);
-  min-height: calc(100svh - var(--header) - 46px);
+  min-height: calc(100svh - var(--header));
   display: flex;
   flex-direction: column;
   justify-content: center;

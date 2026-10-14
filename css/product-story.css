@@ -35,31 +35,34 @@ body.page-product-story::before {
   border: 0;
 }
 
-/* Top email signup (below navbar) */
-.page-product-story .ps-signup {
+/* Hero email signup (main CTA) */
+.page-product-story .ax-hero .ps-signup {
+  grid-area: actions;
   position: relative;
-  z-index: 24;
-  margin: 14px auto 0;
-  width: min(1180px, calc(100% - 20px));
-  padding: 14px 18px;
-  border: 1px solid rgba(92, 232, 212, 0.28);
-  border-radius: 999px;
+  z-index: 2;
+  align-self: start;
+  margin: 0;
+  width: 100%;
+  max-width: 440px;
+  padding: 18px 18px 16px;
+  border: 1px solid rgba(92, 232, 212, 0.32);
+  border-radius: 22px;
   background:
-    linear-gradient(120deg, rgba(92, 232, 212, 0.14), rgba(8, 24, 34, 0.55) 45%, rgba(56, 189, 248, 0.1));
+    linear-gradient(160deg, rgba(92, 232, 212, 0.12), rgba(6, 24, 32, 0.82) 42%, rgba(8, 28, 40, 0.9));
   box-shadow:
-    0 0 40px rgba(92, 232, 212, 0.12),
-    inset 0 1px 0 rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+    0 16px 40px rgba(0, 0, 0, 0.28),
+    0 0 0 1px rgba(92, 232, 212, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
 }
 
 .page-product-story .ps-signup-inner {
   width: 100%;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 14px 24px;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 14px;
 }
 
 .page-product-story .ps-signup-kicker {
@@ -75,32 +78,31 @@ body.page-product-story::before {
 .page-product-story .ps-signup-text {
   margin: 0;
   color: rgba(247, 250, 251, 0.72);
-  font-size: 0.92rem;
+  font-size: 0.9rem;
+  line-height: 1.45;
 }
 
 .page-product-story .ps-signup-form {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: center;
-  gap: 10px;
-  flex: 1 1 280px;
-  justify-content: flex-end;
-  max-width: 520px;
-  margin-left: auto;
+  gap: 8px;
+  width: 100%;
+  margin: 0;
 }
 
 .page-product-story .ps-signup-form input {
-  flex: 1 1 200px;
+  flex: 1 1 auto;
   min-width: 0;
-  min-height: 46px;
-  padding: 12px 16px;
+  min-height: 44px;
+  padding: 10px 14px;
   border: 1px solid rgba(92, 232, 212, 0.28);
   border-radius: 999px;
-  background: rgba(4, 12, 20, 0.65);
+  background: rgba(4, 12, 20, 0.75);
   color: #f7fafb;
   font: inherit;
+  font-size: 0.92rem;
   caret-color: #5ce8d4;
-  box-shadow: 0 0 20px rgba(92, 232, 212, 0.06);
 }
 
 .page-product-story .ps-signup-form input::placeholder {
@@ -110,37 +112,39 @@ body.page-product-story::before {
 .page-product-story .ps-signup-form input:focus {
   outline: none;
   border-color: rgba(92, 232, 212, 0.7);
-  box-shadow: 0 0 0 3px rgba(92, 232, 212, 0.16), 0 0 28px rgba(92, 232, 212, 0.2);
+  box-shadow: 0 0 0 3px rgba(92, 232, 212, 0.16);
 }
 
 .page-product-story .ps-signup-form .btn {
-  min-height: 46px;
-  padding: 0 22px;
+  flex: 0 0 auto;
+  min-height: 44px;
+  padding: 0 18px;
   border-radius: 999px;
   background: #5ce8d4;
   color: #061018;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.06em;
-  box-shadow: 0 0 28px rgba(92, 232, 212, 0.35);
+  text-transform: uppercase;
+  white-space: nowrap;
+  box-shadow: 0 0 24px rgba(92, 232, 212, 0.3);
   transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
 }
 
 .page-product-story .ps-signup-form .btn:hover {
   background: #b8fff6;
   transform: translateY(-1px);
-  box-shadow: 0 0 36px rgba(92, 232, 212, 0.5);
+  box-shadow: 0 0 32px rgba(92, 232, 212, 0.45);
 }
 
 @media (max-width: 720px) {
-  .page-product-story .ps-signup {
-    border-radius: 22px;
+  .page-product-story .ax-hero .ps-signup {
+    max-width: none;
     padding: 16px;
   }
 
   .page-product-story .ps-signup-form {
-    width: 100%;
-    max-width: none;
-    justify-content: stretch;
+    flex-wrap: wrap;
   }
 
   .page-product-story .ps-signup-form .btn {
@@ -148,15 +152,15 @@ body.page-product-story::before {
   }
 }
 
-/* Floating glass navbar */
+/* Navbar — same dark grid section, attached to hero */
 .page-product-story .site-header {
   position: sticky;
-  top: 12px;
+  top: 0;
   z-index: 30;
   height: auto;
   min-height: 0;
-  margin: 12px 0 0;
-  padding: 0;
+  margin: 0;
+  padding: 14px 0 0;
   background: transparent !important;
   border: 0 !important;
   backdrop-filter: none;
@@ -269,7 +273,8 @@ body.page-product-story::before {
 
 @media (max-width: 900px) {
   .page-product-story .site-header {
-    top: 8px;
+    top: 0;
+    padding-top: 10px;
   }
 
   .page-product-story .header-inner {
@@ -330,8 +335,9 @@ body.page-product-story::before {
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  padding: 36px 0 0;
-  min-height: calc(100svh - var(--header) - 46px);
+  margin-top: calc(-1 * (var(--ps-nav-h) + 34px));
+  padding: calc(var(--ps-nav-h) + 48px) 0 0;
+  min-height: calc(100svh + 18px);
   background-color: #061820;
   background-image:
     linear-gradient(rgba(92, 232, 212, 0.06) 1px, transparent 1px),
@@ -391,7 +397,7 @@ body.page-product-story::before {
 .page-product-story .ax-hero h1,
 .page-product-story .ax-hero .lede,
 .page-product-story .ax-hero .flavor-chip,
-.page-product-story .ax-hero .hero-actions,
+.page-product-story .ax-hero .ps-signup,
 .page-product-story .ax-hero-visual {
   animation: ps-rise 0.85s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
@@ -400,7 +406,7 @@ body.page-product-story::before {
 .page-product-story .ax-hero h1 { animation-delay: 0.12s; }
 .page-product-story .ax-hero .lede { animation-delay: 0.2s; }
 .page-product-story .ax-hero .flavor-chip { animation-delay: 0.28s; }
-.page-product-story .ax-hero .hero-actions { animation-delay: 0.36s; }
+.page-product-story .ax-hero .ps-signup { animation-delay: 0.36s; }
 .page-product-story .ax-hero-visual { animation-delay: 0.16s; }
 
 /* Clean label — no glowing pill chrome */
@@ -485,60 +491,6 @@ body.page-product-story::before {
 
 .page-product-story .ax-hero .flavor-chip i {
   display: none;
-}
-
-.page-product-story .ax-hero .hero-actions {
-  gap: 20px;
-  align-items: center;
-}
-
-.page-product-story .ax-hero .btn {
-  position: relative;
-  overflow: hidden;
-  min-height: 52px;
-  padding: 0 28px;
-  border-radius: 999px;
-  background: var(--ps-teal);
-  color: #061018;
-  box-shadow: 0 8px 28px rgba(92, 232, 212, 0.28);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
-}
-
-.page-product-story .ax-hero .btn::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(110deg, transparent 30%, rgba(255, 255, 255, 0.4) 50%, transparent 70%);
-  transform: translateX(-130%);
-  transition: transform 0.55s ease;
-}
-
-.page-product-story .ax-hero .btn:hover {
-  background: #b8fff6;
-  transform: translateY(-2px);
-  box-shadow: 0 12px 32px rgba(92, 232, 212, 0.38);
-}
-
-.page-product-story .ax-hero .btn:hover::after {
-  transform: translateX(130%);
-}
-
-.page-product-story .ax-hero .ax-link {
-  letter-spacing: 0.14em;
-  text-decoration: none;
-  color: #f7fafb;
-  border-bottom: 1px solid rgba(92, 232, 212, 0.55);
-  padding-bottom: 3px;
-  transition: color 0.25s ease, border-color 0.25s ease;
-}
-
-.page-product-story .ax-hero .ax-link::after {
-  display: none;
-}
-
-.page-product-story .ax-hero .ax-link:hover {
-  color: var(--ps-teal);
-  border-bottom-color: var(--ps-teal);
 }
 
 /* Product — shiny edge on img only */
@@ -896,16 +848,7 @@ body.page-product-story::before {
 }
 
 .page-product-story .ax-show-visual::before {
-  content: "";
-  position: absolute;
-  z-index: 0;
-  width: min(78%, 380px);
-  height: min(78%, 380px);
-  border-radius: 50%;
-  background:
-    radial-gradient(circle at 50% 45%, rgba(92, 232, 212, 0.2), transparent 68%);
-  filter: blur(4px);
-  pointer-events: none;
+  display: none;
 }
 
 .page-product-story .ax-show-visual::after {
@@ -2381,7 +2324,7 @@ body.page-product-story::before {
   .page-product-story .ax-hero h1,
   .page-product-story .ax-hero .lede,
   .page-product-story .ax-hero .flavor-chip,
-  .page-product-story .ax-hero .hero-actions,
+  .page-product-story .ax-hero .ps-signup,
   .page-product-story .ax-hero-visual,
   .page-product-story .ax-rail div,
   .page-product-story .ax-show-visual img,
